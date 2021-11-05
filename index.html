@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Frontend Mentor | Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="container">
+
+            <div class="header">
+                <div class="logo">
+                    <img src="images/logo.svg" alt="logo">
+                </div>
+                <div class="score-box">
+                    <p class="score-text">SCORE</p>
+                    <p class="score" id="score">0</p>
+                </div>
+            </div>
+
+            <div class="rock-paper-sciss" id="rock-paper-sciss">
+                <img src="images/bg-triangle.svg" alt="bg-triangle" class="triangle">
+                <div class="part1">
+                    <div class="part11" id="paper-main"><img src="images/icon-paper.svg" alt="paper"></div>
+                    <div class="part12" id="scissors-main"><img src="images/icon-scissors.svg" alt="scissors"></div>
+                </div>
+                <div class="part2" id="rock-main"><img src="images/icon-rock.svg" alt="rock"></div>
+            </div>
+
+            <!-- <div class="picked">
+                <div class="you-picked">
+                    <p class="text-picked">YOU PICKED</p>
+                    <div class="you-picked-img"><img src="images/icon-paper.svg" alt="rock"></div>
+                </div>
+                <div class="house-picked">
+                    <p class="text-picked">THE HOUSE PICKED</p>
+                    <div class="house-picked-img"><img src="images/icon-paper.svg" alt="rock"></div>
+                </div>
+            </div> -->
+
+            <div class="picked-finish" id="picked-finish">
+                <div class="you-picked">
+                    <p class="text-picked">YOU PICKED</p>
+                    <div class="you-picked-img" id="you-picked-img"><img src="images/icon-paper.svg" alt="rock" id="picked-img1"></div>
+                </div>
+                <div class="win-or-lose">
+                    <p class="you-result" id="you-result">YOU WIN</p>
+                    <div class="play-again" id="play-again">PLAY AGAIN</div>
+                </div>
+                <div class="house-picked">
+                    <p class="text-picked">THE HOUSE PICKED</p>
+                    <div class="house-picked-img" id="house-picked-img"><img src="images/icon-paper.svg" alt="rock" id="picked-img2"></div>
+                </div>
+            </div>
+
+            <div class="rules-big" id="btn-rules">
+                <div class="rules">RULES</div>
+            </div>
+
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span class="close"><img src="images/icon-close.svg" alt="close"></span>
+                    <p class="rules-text">RULES</p>
+                    <img src="images/image-rules.svg" alt="rules" class="rules-image">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- <img src="images/logo.svg" width="305" height="312" id="myPicture" alt="some image"> -->
+    <script src="main.js"></script>
+</body>
+
+</html>
