@@ -1,3 +1,4 @@
+var body = document.getElementById("body");
 var modalRules = document.getElementById("modal");
 var btnRules = document.getElementById("btn-rules");
 var closeModal = document.getElementsByClassName("close")[0];
@@ -17,6 +18,7 @@ var playAgain = document.getElementById("play-again");
 var youResult = document.getElementById("you-result");
 var i = 0;
 var score = document.getElementById("score");
+var x = window.matchMedia("(max-width: 850px)")
 
 btnRules.addEventListener("click",function(){
     modal.style.display = "flex";
@@ -37,8 +39,9 @@ rockMain.addEventListener("click",function(){
   pickedFinish.style.display = "flex";
   pickedImg1.src.match("images/icon-rock.svg");
   pickedImg1.src = "images/icon-rock.svg";
+  pickedDiv1.style.borderColor = "#DB2E4D";
   choosePic();
-  setDiv1();
+  // setDiv1();
   setDiv2();
   resultText();
 })
@@ -49,9 +52,10 @@ scissorsMain.addEventListener("click",function(){
   pickedImg1.src.match("images/icon-scissors.svg");
   pickedImg1.src = "images/icon-scissors.svg";
   choosePic();
-  setDiv1();
+  // setDiv1();
   setDiv2();
   resultText();
+  pickedDiv1.style.borderColor = "#EB9F0E";
 })
 
 paperMain.addEventListener("click",function(){
@@ -59,8 +63,9 @@ paperMain.addEventListener("click",function(){
   pickedFinish.style.display = "flex";
   pickedImg1.src.match("images/icon-paper.svg");
   pickedImg1.src = "images/icon-paper.svg";
+  pickedDiv1.style.borderColor = "#4664F4";
   choosePic();
-  setDiv1();
+  // setDiv1();
   setDiv2();
   resultText();
 })
@@ -77,34 +82,29 @@ function choosePic() {
 
 function setDiv2(){
   if(pickedImg2.src.match("images/icon-paper.svg")){
-    pickedDiv2.style.border = "33px solid #4664F4";
-    pickedDiv2.style.boxShadow = "inset 0px 12px 0px #BABFD4, 0px 12px 0px #2a45c2";
+    pickedDiv2.style.borderColor = "#4664F4";
+    // pickedDiv2.style.boxShadow = "inset 0px 12px 0px #BABFD4, 0px 12px 0px #2a45c2";
   }
   else if(pickedImg2.src.match("images/icon-scissors.svg")){
-    pickedDiv2.style.border = "33px solid #EB9F0E";
-    pickedDiv2.style.boxShadow = "inset 0px 12px 0px #BABFD4, 0px 12px 0px #C76C1B";
+    pickedDiv2.style.borderColor = "#EB9F0E";
+    // pickedDiv2.style.boxShadow = "inset 0px 1rem 0px #BABFD4, 0px 1rem 0px #C76C1B";
   }
   else{
-    pickedDiv2.style.border = "33px solid #DB2E4D";
-    pickedDiv2.style.boxShadow = "inset 0px 12px 0px #BABFD4, 0px 12px 0px #9D1634";
+    pickedDiv2.style.borderColor = "#DB2E4D";
+    // pickedDiv2.style.boxShadow = "inset 0px 1rem 0px #BABFD4, 0px 1rem 0px #9D1634";
   }
 }
-
-function setDiv1(){
-  if(pickedImg1.src.match("images/icon-paper.svg")){
-    pickedDiv1.style.border = "33px solid #4664F4";
-    pickedDiv1.style.boxShadow = "inset 0px 12px 0px #BABFD4, 0px 12px 0px #2a45c2";
-  }
-  else if(pickedImg1.src.match("images/icon-scissors.svg")){
-    pickedDiv1.style.border = "33px solid #EB9F0E";
-    pickedDiv1.style.boxShadow = "inset 0px 12px 0px #BABFD4, 0px 12px 0px #C76C1B";
-
-  }
-  else{
-    pickedDiv1.style.border = "33px solid #DB2E4D";
-    pickedDiv1.style.boxShadow = "inset 0px 12px 0px #BABFD4, 0px 12px 0px #9D1634";
-  }
-}
+// function setDiv1(){
+//   if(pickedImg1.src.match("images/icon-paper.svg")){
+//     pickedDiv1.style.boxShadow = "inset 0px 12px 0px #BABFD4, 0px 12px 0px #2a45c2";
+//   }
+//   else if(pickedImg2.src.match("images/icon-scissors.svg")){
+//     pickedDiv1.style.boxShadow = "inset 0px 12px 0px #BABFD4, 0px 12px 0px #C76C1B";
+//   }
+//   else{
+//     pickedDiv1.style.boxShadow = "inset 0px 12px 0px #BABFD4, 0px 12px 0px #9D1634";
+//   }
+// }
 
 function resultText(){
   if((pickedImg1.src.match("images/icon-paper.svg") && pickedImg2.src.match("images/icon-rock.svg")) || 
